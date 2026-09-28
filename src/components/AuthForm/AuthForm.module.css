@@ -1,0 +1,103 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f0f2f5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 28rem);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(11, 20, 26, 0.05);
+  border-top: 6px solid #007aff;
+}
+
+.form h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.85rem;
+  color: #111b21;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.description {
+  margin: 0.75rem 0 2rem;
+  color: #667781;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.field span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111b21;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e1e7ec;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: #fafafa;
+  color: #111b21;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.field input:focus {
+  border-color: #007aff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
+}
+
+.field input::placeholder {
+  color: #a1a8ad;
+}
+
+.form :global(.button).submit {
+  width: 100% !important;
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+}
+
+.error {
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: #ea0038;
+  background: #ffebe6;
+  border-left: 4px solid #ea0038;
+  font-weight: 500;
+}
+
+@media (max-width: 48rem) {
+  .page {
+    padding: 1rem;
+    background-color: #ffffff;
+  }
+
+  .form {
+    padding: 1.5rem 1rem;
+    box-shadow: none;
+    border-top: none;
+    width: 100%;
+  }
+}

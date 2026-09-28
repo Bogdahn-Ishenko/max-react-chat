@@ -1,0 +1,51 @@
+.row {
+  display: flex;
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+
+.rowOutgoing {
+  justify-content: flex-end;
+}
+
+.rowIncoming {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: min(75%, 32rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.5rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+}
+
+.rowOutgoing .bubble {
+  background-color: #e9fdff;
+  color: #111b21;
+  border-top-right-radius: 0;
+}
+
+.rowIncoming .bubble {
+  background-color: #ffffff;
+  color: #111b21;
+  border-top-left-radius: 0;
+}
+
+.bubble time {
+  align-self: flex-end;
+  font-size: 0.65rem;
+  color: #667781;
+  margin-top: 0.15rem;
+  user-select: none;
+}
+
+@media (max-width: 48rem) {
+  .bubble {
+    max-width: 85%;
+  }
+}

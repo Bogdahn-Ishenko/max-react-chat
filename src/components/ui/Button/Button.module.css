@@ -1,0 +1,33 @@
+.button {
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  background-color: #007aff;
+  font-size: 0.95rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  box-sizing: border-box;
+  width: 7rem;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  background-color: #a1a8ad;
+  cursor: not-allowed;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #0062cc;
+}
+
+.button:active:not(:disabled) {
+  background-color: #004b9b;
+}

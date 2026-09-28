@@ -1,0 +1,55 @@
+.footer {
+  width: 100%;
+  background: transparent; 
+  box-sizing: border-box;
+}
+
+.inputForm {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem 1.25rem; 
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.inputForm input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ffffff;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: #ffffff; 
+  color: #111b21;
+  font-size: 0.95rem;
+  line-height: 1.25rem;
+  box-shadow: 0 2px 5px rgba(11, 20, 26, 0.08); 
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.inputForm input:focus {
+  border-color: #007aff;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.15);
+}
+
+.inputForm input:disabled {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+.inputForm :global(.button) {
+  height: auto;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 7rem !important;
+  box-shadow: 0 2px 5px rgba(0, 122, 255, 0.2); 
+}
+
+@media (max-width: 48rem) {
+  .inputForm {
+    padding: 0.5rem 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,149 @@
+.layout {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  
+  grid-template-columns: minmax(20rem, 25rem) 1fr;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+.content {
+  min-width: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #efeae2;
+  background-image: url('../../assets/tile.svg');
+  background-repeat: repeat;
+  background-size: 400px;
+  position: relative;
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #667781;
+  background-color: #f8f9fa;
+  text-align: center;
+  gap: 1rem;
+}
+
+.empty p {
+  font-size: 1.1rem;
+  color: #41525d;
+  margin: 0;
+}
+
+.mobileToggleEmpty {
+  display: none;
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #007aff;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+@media (max-width: 48rem) {
+  .layout {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .mobileToggleEmpty {
+    display: block;
+  }
+}
+
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(11, 20, 26, 0.4);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 0.75rem;
+  width: min(90%, 26rem);
+  box-shadow: 0 4px 24px rgba(11, 20, 26, 0.15);
+  animation: scaleIn 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111b21;
+  font-weight: 600;
+}
+
+.modal p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: #667781;
+  line-height: 1.45;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.cancelBtn {
+  border: 1px solid #e9edef;
+  background: transparent;
+  padding: 0.65rem 1.2rem;
+  border-radius: 0.5rem;
+  color: #54656f;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancelBtn:hover {
+  background-color: #f0f2f5;
+  color: #111b21;
+}
+
+.confirmBtn {
+  background-color: #007aff !important; 
+}
+
+.confirmBtn:hover:not(:disabled) {
+  background-color: #0062cc !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
